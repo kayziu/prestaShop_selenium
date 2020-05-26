@@ -45,9 +45,9 @@ public class SweaterPage {
 
     public void selectQuantity(String quantity) {
         quantityField.click();
-        quantityField.clear();
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(quantityField));
+        quantityField.clear();
         quantityField.sendKeys(quantity);
     }
 
